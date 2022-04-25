@@ -6,14 +6,9 @@
 //
 
 import SwiftUI
-import Firebase
 
 @main
 struct SwiftUI_ChatApp: App {
-    
-    init() {
-        FirebaseApp.configure()
-    }
     
     var body: some Scene {
         WindowGroup {

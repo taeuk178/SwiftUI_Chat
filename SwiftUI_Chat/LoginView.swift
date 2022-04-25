@@ -6,12 +6,29 @@
 //
 
 import SwiftUI
+import Firebase
+
+class FirebaseManager: NSObject {
+
+    let auth: Auth
+
+    static let shared = FirebaseManager()
+
+    override init() {
+        FirebaseApp.configure()
+
+        self.auth = Auth.auth()
+
+        super.init()
+    }
+}
 
 struct LoginView: View {
     
     @State var isLoginMode = false
     @State var email = ""
     @State var password = ""
+    @State var loginStatusMessage = ""
     
     var body: some View {
         NavigationView {
@@ -59,20 +76,47 @@ struct LoginView: View {
                         }.background(Color.blue)
                     }
                 }
-                .padding()
+                Text(self.loginStatusMessage)
+                    .foregroundColor(.red)
 
             }
             .navigationTitle(isLoginMode ? "Log in" : "Create Account")
             .background(Color(.init(white: 0, alpha: 0.05))
                             .ignoresSafeArea())
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     private func handleAction() {
         if isLoginMode {
             print("isLogin True")
+            loginUser()
         } else {
+            createNewAccount()
             print("isLogin false")
+        }
+    }
+    
+    private func createNewAccount() {
+        FirebaseManager.shared.auth.createUser(withEmail: email, password: password) { result, error in
+            if let error = error {
+                print("Error: ", error)
+                return
+            }
+            
+            self.loginStatusMessage = "Successfully logged in as user: \(result?.user.uid ?? "")"
+        }
+    }
+    
+    private func loginUser() {
+        FirebaseManager.shared.auth.signIn(withEmail: email, password: password) { result, error in
+            if let err = error {
+                print("Error: ", err)
+                self.loginStatusMessage = "failed \(error)"
+                return
+            }
+            
+            self.loginStatusMessage = "Successfully logged in as user: \(result?.user.uid ?? "")"
         }
     }
 }
