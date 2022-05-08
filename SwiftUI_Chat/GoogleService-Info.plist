@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>904935982970-c67tl60oi4570p29n8u7kkngocas9fgk.apps.googleusercontent.com</string>
+	<string>867465137995-lqpc542g51o8ed0fgh3i8g045978clgu.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.904935982970-c67tl60oi4570p29n8u7kkngocas9fgk</string>
+	<string>com.googleusercontent.apps.867465137995-lqpc542g51o8ed0fgh3i8g045978clgu</string>
 	<key>API_KEY</key>
-	<string>AIzaSyC5cwfIgXsOv1Iq0XO231FAwaF34yrE6Dg</string>
+	<string>AIzaSyAoZY2bYhJAOdSkgcLTNZupXQm2XKxaA4A</string>
 	<key>GCM_SENDER_ID</key>
-	<string>904935982970</string>
+	<string>867465137995</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.SwiftUI-Chat</string>
+	<string>com.nudge.chatapp</string>
 	<key>PROJECT_ID</key>
-	<string>swiftuichat-2f596</string>
+	<string>nudgechatapp</string>
 	<key>STORAGE_BUCKET</key>
-	<string>swiftuichat-2f596.appspot.com</string>
+	<string>nudgechatapp.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:904935982970:ios:8dc8901f040c2df29478c3</string>
+	<string>1:867465137995:ios:dc2e771df7b4a73c4162ce</string>
 </dict>
 </plist>

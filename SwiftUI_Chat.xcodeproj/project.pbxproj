@@ -11,9 +11,9 @@
 		3034D0E92814CA89008F8C98 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3034D0E82814CA89008F8C98 /* LoginView.swift */; };
 		3034D0EB2814CA8C008F8C98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3034D0EA2814CA8C008F8C98 /* Assets.xcassets */; };
 		3034D0EE2814CA8C008F8C98 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3034D0ED2814CA8C008F8C98 /* Preview Assets.xcassets */; };
-		3034D0F52814CBAF008F8C98 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3034D0F42814CBAF008F8C98 /* GoogleService-Info.plist */; };
 		3034D0FC28170338008F8C98 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3034D0FB28170338008F8C98 /* FirebaseAuth */; };
 		3034D0FE28170338008F8C98 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3034D0FD28170338008F8C98 /* FirebaseStorage */; };
+		A92D7D2B2827E8230009AC42 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A92D7D2A2827E8230009AC42 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +22,7 @@
 		3034D0E82814CA89008F8C98 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3034D0EA2814CA8C008F8C98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3034D0ED2814CA8C008F8C98 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		3034D0F42814CBAF008F8C98 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A92D7D2A2827E8230009AC42 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A99D61E728177B3500825F56 /* SwiftUI-Chat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SwiftUI-Chat-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -62,7 +62,7 @@
 				3034D0E62814CA89008F8C98 /* SwiftUI_ChatApp.swift */,
 				3034D0E82814CA89008F8C98 /* LoginView.swift */,
 				3034D0EA2814CA8C008F8C98 /* Assets.xcassets */,
-				3034D0F42814CBAF008F8C98 /* GoogleService-Info.plist */,
+				A92D7D2A2827E8230009AC42 /* GoogleService-Info.plist */,
 				3034D0EC2814CA8C008F8C98 /* Preview Content */,
 			);
 			path = SwiftUI_Chat;
@@ -143,7 +143,7 @@
 			files = (
 				3034D0EE2814CA8C008F8C98 /* Preview Assets.xcassets in Resources */,
 				3034D0EB2814CA8C008F8C98 /* Assets.xcassets in Resources */,
-				3034D0F52814CBAF008F8C98 /* GoogleService-Info.plist in Resources */,
+				A92D7D2B2827E8230009AC42 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +301,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.SwiftUI-Chat";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nudge.chatapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -332,7 +332,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.SwiftUI-Chat";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nudge.chatapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

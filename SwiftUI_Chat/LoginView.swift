@@ -26,17 +26,12 @@ class FirebaseManager: NSObject {
 
 struct LoginView: View {
 	
-	enum GoogleSignState {
-		case signIn
-		case signOut
-	}
-	
-	@State var googleState: GoogleSignState = .signOut
-	
 	@State var isLoginMode = false
 	@State var email = ""
 	@State var password = ""
 	@State var loginStatusMessage = ""
+	
+	@State var shouldShowImagePicker = false
 	
 	var body: some View {
 		NavigationView {
@@ -51,9 +46,10 @@ struct LoginView: View {
 					}.pickerStyle(.segmented)
 						.padding()
 					
-					if isLoginMode {
+					if !isLoginMode {
 						Button {
-							
+							shouldShowImagePicker
+								.toggle()
 						} label: {
 							Image(systemName: "person.fill")
 								.font(.system(size: 64))
@@ -108,7 +104,7 @@ struct LoginView: View {
 	private func createNewAccount() {
 		FirebaseManager.shared.auth.createUser(withEmail: email, password: password) { result, error in
 			if let error = error {
-				print("Error: ", error)
+				self.loginStatusMessage = "failed \(error)"
 				return
 			}
 			
@@ -118,9 +114,8 @@ struct LoginView: View {
 	
 	private func loginUser() {
 		FirebaseManager.shared.auth.signIn(withEmail: email, password: password) { result, error in
-			if let err = error {
-				print("Error: ", err)
-				self.loginStatusMessage = "failed \(err)"
+			if let error = error {
+				self.loginStatusMessage = "failed \(error)"
 				return
 			}
 			
@@ -128,10 +123,6 @@ struct LoginView: View {
 		}
 	}
 	
-	private func googleSignIn() {
-		
-		
-	}
 }
 
 struct ContentView_Previews: PreviewProvider {
