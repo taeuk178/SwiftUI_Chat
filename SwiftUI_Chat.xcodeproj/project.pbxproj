@@ -14,6 +14,7 @@
 		3034D0FC28170338008F8C98 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3034D0FB28170338008F8C98 /* FirebaseAuth */; };
 		3034D0FE28170338008F8C98 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3034D0FD28170338008F8C98 /* FirebaseStorage */; };
 		A92D7D2B2827E8230009AC42 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A92D7D2A2827E8230009AC42 /* GoogleService-Info.plist */; };
+		A92D7D2D2827EF500009AC42 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D7D2C2827EF500009AC42 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		3034D0EA2814CA8C008F8C98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3034D0ED2814CA8C008F8C98 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A92D7D2A2827E8230009AC42 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A92D7D2C2827EF500009AC42 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		A99D61E728177B3500825F56 /* SwiftUI-Chat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SwiftUI-Chat-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -61,6 +63,7 @@
 				A99D61E728177B3500825F56 /* SwiftUI-Chat-Info.plist */,
 				3034D0E62814CA89008F8C98 /* SwiftUI_ChatApp.swift */,
 				3034D0E82814CA89008F8C98 /* LoginView.swift */,
+				A92D7D2C2827EF500009AC42 /* ImagePicker.swift */,
 				3034D0EA2814CA8C008F8C98 /* Assets.xcassets */,
 				A92D7D2A2827E8230009AC42 /* GoogleService-Info.plist */,
 				3034D0EC2814CA8C008F8C98 /* Preview Content */,
@@ -154,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A92D7D2D2827EF500009AC42 /* ImagePicker.swift in Sources */,
 				3034D0E92814CA89008F8C98 /* LoginView.swift in Sources */,
 				3034D0E72814CA89008F8C98 /* SwiftUI_ChatApp.swift in Sources */,
 			);
