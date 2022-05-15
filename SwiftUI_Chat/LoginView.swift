@@ -12,13 +12,15 @@ import FirebaseStorage
 import FirebaseFirestore
 
 struct LoginView: View {
+    
+    let didCompletedLoginProccess: () -> ()
 	
-	@State var isLoginMode = false
-	@State var email = ""
-	@State var password = ""
-	@State var loginStatusMessage = ""
+	@State private var isLoginMode = false
+	@State private var email = ""
+	@State private var password = ""
+	@State private var loginStatusMessage = ""
 	
-	@State var shouldShowImagePicker = false
+	@State private var shouldShowImagePicker = false
 	
 	var body: some View {
 		NavigationView {
@@ -110,6 +112,11 @@ struct LoginView: View {
 	}
 	
 	private func createNewAccount() {
+        if self.image == nil {
+            self.loginStatusMessage = "You must select an avator image"
+            return
+        }
+        
 		FirebaseManager.shared.auth.createUser(withEmail: email, password: password) { result, error in
 			if let error = error {
 				self.loginStatusMessage = "failed \(error)"
@@ -161,6 +168,8 @@ struct LoginView: View {
 							}
 
 							print("Success")
+                        
+                        self.didCompletedLoginProccess()
 					}
 	}
 	
@@ -172,6 +181,8 @@ struct LoginView: View {
 			}
 			
 			self.loginStatusMessage = "Successfully logged in as user: \(result?.user.uid ?? "")"
+            
+            self.didCompletedLoginProccess()
 		}
 	}
 	
@@ -179,6 +190,8 @@ struct LoginView: View {
 
 struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
-		LoginView()
+        LoginView(didCompletedLoginProccess: {
+            
+        })
 	}
 }
